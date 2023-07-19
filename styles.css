@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    /* Dev Option */
+    /*  outline: 1px solid limegreen; */
+}
+
+:root {
+    --black: hsl(0, 0%, 0%);
+    --dark-blue: rgb(8, 8, 39);
+    --dark-grey: rgb(32, 29, 41);
+    --mint-green: rgb(38, 182, 122);
+}
+
+body {
+    background-color: var(--black);
+}
+.container {
+    background-color: var(--dark-blue);
+    height: 100vh;
+}
+
+.header-item {
+    height: 10vh;
+}
+
+.app-title {
+    height: 100%;
+    text-align: center;
+    padding-top: 2vh;
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: var(--mint-green);
+
+}
+
+.clock-items {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+}
+
+.clock {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--dark-grey);
+    color: var(--mint-green);
+    border-radius: 50%;
+
+    text-align: center;
+}
+
+.clock-items-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+    top: 32%;
+
+    font-size: 10vh;
+
+}
+
+.clock-status {
+    font-size: 7vh;
+} 
+
+
+.button-group {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--mint-green);
+}
+
+.button-item {
+    padding: 2vh 3vh;
+    margin: 1vh;
+    font-size: 3vh;
+    border-radius: 10%;
+    border: 0.1rem solid var(--mint-green);
+}
+
+.set-list {
+    font-size: 3vh;
+    color: var(--mint-green);
+    margin-left: 4vh;
+    list-style-type: none;
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+      max-width: 60vh;
+      margin: auto;
+    }
+  }

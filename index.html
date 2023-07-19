@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1d2430"/>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" href="manifest/icon-192x192.png">
+    <link rel="manifest" href="manifest/manifest.webmanifest">
+    <title>PumpBuddy</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-item">
+            <h1 class="app-title">PumpBuddy</h1>
+        </div>
+        
+        <div class="clock-items" id="clock">
+            <div class="clock">
+                <div class="clock-items-group">
+                    <span class="clock-status" id="clock-status">Status</span>
+                    <span class="clock-value" id="time"><span id="minutes">00</span>:<span id="seconds">00</span></span>
+                    <span class="clock-set" id="set">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <span class="button-item" id="start">Start</span>
+            <span class="button-item" id="pause">Pause</span>
+            <span class="button-item" id="reset">Reset</span>
+        </div>
+
+        <div class="excecise-summary">
+           <ul class="set-list" id="set-list"></ul>
+        </div>
+    </div>
+    <script>
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js', { scope: '/' });
+        }
+        </script>
+        
+    <script src="app.js" type="text/javascript"></script>
+
+</body>
+
+</html>
